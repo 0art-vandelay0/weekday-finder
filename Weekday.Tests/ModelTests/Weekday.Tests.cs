@@ -14,5 +14,12 @@ namespace Weekday.Models.Tests
             Weekday weekdayDate = new Weekday(date);
             Assert.AreEqual(typeof(Weekday), weekdayDate.GetType());
         }
+        [TestMethod]
+        public void WeekdayConstuctor_CreatesInstanceOfWeekdayWithProperty_Weekday()
+        {
+            DateTime date = new DateTime(2023, 7, 12);
+            Weekday weekdayDate = new Weekday(date);
+            Assert.AreEqual(date, weekdayDate.Date);
+        }
     }
 }
